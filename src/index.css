@@ -1,0 +1,200 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply block w-16 h-1 bg-portfolio-blue mt-2;
+  }
+  
+  .skill-tag {
+    @apply px-3 py-1 bg-portfolio-lightBlue text-gray-800 rounded-full text-sm font-medium mr-2 mb-2;
+  }
+  
+  .timeline-item {
+    @apply border-l-2 border-portfolio-blue pl-6 pb-8 relative;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    @apply absolute w-4 h-4 bg-portfolio-blue rounded-full -left-[9px] top-1;
+  }
+
+  .glass-card {
+    @apply bg-white bg-opacity-90 shadow-lg rounded-xl p-6 transition-all hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* New animations and styles */
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-portfolio-blue to-blue-400 bg-clip-text text-transparent;
+  }
+  
+  .card-highlight {
+    @apply border-l-4 border-portfolio-blue;
+  }
+  
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .7; }
+  }
+  
+  .shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shine::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 50%;
+    height: 300%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+    transform: rotate(35deg);
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes shine {
+    0% { left: -100%; }
+    40%, 100% { left: 100%; }
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  }
+  
+  .glow {
+    filter: drop-shadow(0 0 8px rgba(51, 195, 240, 0.5));
+  }
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
