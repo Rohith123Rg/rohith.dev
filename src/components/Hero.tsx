@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -13,15 +12,15 @@ const Hero = () => {
       transition: {
         delay: i * 0.2,
         duration: 0.6,
-        ease: "easeOut"
-      }
-    })
+        ease: "easeOut",
+      },
+    }),
   };
 
   const handleScroll = () => {
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById("contact");
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -48,7 +47,7 @@ const Hero = () => {
                     transition={{
                       duration: 2,
                       repeat: Infinity,
-                      repeatType: "reverse"
+                      repeatType: "reverse",
                     }}
                   >
                     ROHITH GUPTHA
@@ -73,8 +72,9 @@ const Hero = () => {
                 variants={textVariants}
                 className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto md:mx-0"
               >
-                7+ years of experience developing modern web applications using React, Angular, and React-Native
-                with expertise in AWS services and CI/CD pipelines.
+                6+ years of experience developing modern web applications using
+                React, Angular, and React-Native with expertise in AWS services
+                and CI/CD pipelines.
               </motion.p>
 
               <motion.div
@@ -115,7 +115,7 @@ const Hero = () => {
                 duration: 0.8,
                 delay: 0.2,
                 type: "spring",
-                stiffness: 100
+                stiffness: 100,
               }}
               className="relative"
             >
@@ -125,19 +125,20 @@ const Hero = () => {
                   boxShadow: [
                     "0 0 0 rgba(51, 195, 240, 0.3)",
                     "0 0 20px rgba(51, 195, 240, 0.6)",
-                    "0 0 0 rgba(51, 195, 240, 0.3)"
-                  ]
+                    "0 0 0 rgba(51, 195, 240, 0.3)",
+                  ],
                 }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
-                  repeatType: "reverse"
+                  repeatType: "reverse",
                 }}
               >
-                <div
-                  className="w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-68 lg:h-68 xl:w-76 xl:h-76 rounded-full bg-portfolio-blue/40 flex items-center justify-center"
-                >
-                  <img src={Rohith_Dev} className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-full bg-white shadow-xl flex items-center justify-center" />
+                <div className="w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-68 lg:h-68 xl:w-76 xl:h-76 rounded-full bg-portfolio-blue/40 flex items-center justify-center">
+                  <img
+                    src={Rohith_Dev}
+                    className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-full bg-white shadow-xl flex items-center justify-center"
+                  />
                 </div>
               </motion.div>
               <motion.div
@@ -151,7 +152,7 @@ const Hero = () => {
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  7+ Years Exp.
+                  6+ Years Exp.
                 </motion.span>
               </motion.div>
             </motion.div>
