@@ -62,7 +62,7 @@ const Hero = () => {
                 variants={textVariants}
                 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-600"
               >
-                Sr. React Developer
+                Sr. Full Stack Developer
               </motion.h2>
 
               <motion.p

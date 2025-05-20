@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
@@ -13,11 +12,11 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Veeramalla Rohith Guptha | Senior React Developer";
+    document.title = "Veeramalla Rohith Guptha | Senior Full Stack Developer";
   }, []);
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
